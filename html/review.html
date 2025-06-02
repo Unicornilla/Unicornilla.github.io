@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Margherita Pizza Review</title>
+  <link rel="stylesheet" href="../css/review.css" />
+  <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+
+  <!-- Restaurant Location & Map -->
+  <section class="location-section">
+    <h1>📍 Napoli Bistro</h1>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Napoli+Bistro&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Meal Description -->
+  <section class="meal-info">
+    <h2>🍕 Margherita Pizza</h2>
+    <p class="price">💲Rp. 42.000</p>
+    <p class="description">
+      A classic Italian pizza topped with fresh mozzarella, ripe tomatoes, and fragrant basil. Baked to perfection with a crispy, wood-fired crust.
+    </p>
+    <div class="tags">
+      <span class="tag">Italian</span>
+      <span class="tag">Vegetarian</span>
+      <span class="tag">Cheesy</span>
+      <span class="tag">Basil</span>
+      <span class="tag">Tomato</span>
+    </div>
+  </section>
+
+  <!-- User Reviews -->
+  <section class="reviews">
+    <h2>🌟 User Reviews</h2>
+
+
+
+  
+    <!-- Review 1 -->
+    <div class="review">
+      <img src="../assets/pizza.png" alt="Review 1 photo" />
+      <div class="review-content">
+
+        
+        <p>@budiyaya</p>
+        <p class="review-tags">
+          <span class="tag">Cheesy</span>
+          <span class="tag">Fresh</span>
+        </p>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p>
+          "Hands down the best margherita pizza I've ever had. The basil was so fresh and the crust had that perfect crunch. I would come back to Napoli Bistro just for this."
+        </p>
+      </div>
+    </div>
+
+    
+
+    <!-- Review 2 -->
+    <div class="review">
+      <img src="../assets/pizza2.jpg" alt="Review 2 photo" />
+      <div class="review-content">
+        <p>@bepazoi</p>
+        <p class="review-tags">
+          <span class="tag">Vegetarian</span>
+          <span class="tag">Wood-Fired</span>
+        </p>
+        <p class="stars">⭐⭐⭐⭐</p>
+        <p>
+          "Loved how light yet flavorful this pizza was. As a vegetarian, this is exactly what I look for. Only minus was that it could have used a touch more cheese for my taste."
+        </p>
+      </div>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="review">
+      <img src="../assets/pizza3.jpg" alt="Review 3 photo" />
+      <div class="review-content">
+        <p>@pizzaluver</p>
+        <p class="review-tags">
+          <span class="tag">Crispy Crust</span>
+          <span class="tag">Authentic</span>
+        </p>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p>
+          "Authentic Naples-style pizza. The ingredients tasted incredibly fresh, and the oven-finished crust had that lovely charred edge. Napoli Bistro nailed it!"
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="write-review">
+    <h2>📝 Write a Review</h2>
+
+    <form id="reviewForm">
+
+
+      <!-- Profile Picture + Username -->
+
+      <!-- <div class="form-user">
+        <img src="../assets/default-user.jpg" alt="Your profile" class="small-profile-pic" />
+        <input type="text" id="username" name="username" placeholder="@yourusername" required />
+      </div> -->
+
+      <!-- Star Rating -->
+      <label for="rating">Star Rating:</label>
+      <select id="rating" name="rating" required>
+        <option value="">-- Select --</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="1">⭐</option>
+      </select>
+
+      <!-- Tags -->
+      <label for="tags">Tags (comma separated):</label>
+      <input type="text" id="tags" name="tags" placeholder="e.g. Cheesy, Spicy, Vegetarian" />
+
+      <!-- Upload Photo -->
+      <label for="photo">Upload a photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" />
+
+      <!-- Text Area -->
+      <label for="reviewText">Your Review:</label>
+      <textarea id="reviewText" name="reviewText" rows="4" required placeholder="Share your thoughts..."></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Review</button>
+    </form>
+</section>
+
+</body>
+</html>

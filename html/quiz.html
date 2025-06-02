@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Food Preferences Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1>🍽️ Food Preferences Quiz</h1>
+    <form id="foodQuiz" action="index.html" method="GET">
+
+      <!-- Question 1 -->
+      <div class="quiz-question">
+        <p>1. Which flavor do you prefer most?</p>
+        <label><input type="radio" name="flavor" value="sweet" required /> Sweet</label><br/>
+        <label><input type="radio" name="flavor" value="savory" /> Savory</label><br/>
+        <label><input type="radio" name="flavor" value="spicy" /> Spicy</label><br/>
+        <label><input type="radio" name="flavor" value="sour" /> Sour</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="quiz-question">
+        <p>2. Do you follow any dietary preferences?</p>
+        <label><input type="checkbox" name="diet" value="vegetarian" /> Vegetarian</label><br/>
+        <label><input type="checkbox" name="diet" value="vegan" /> Vegan</label><br/>
+        <label><input type="checkbox" name="diet" value="gluten-free" /> Gluten-Free</label><br/>
+        <label><input type="checkbox" name="diet" value="no-preference" /> No preference</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="quiz-question">
+        <p>3. Which cuisines do you enjoy?</p>
+        <label><input type="checkbox" name="cuisine" value="italian" /> Italian</label><br/>
+        <label><input type="checkbox" name="cuisine" value="japanese" /> Japanese</label><br/>
+        <label><input type="checkbox" name="cuisine" value="mexican" /> Mexican</label><br/>
+        <label><input type="checkbox" name="cuisine" value="indian" /> Indian</label>
+      </div>
+
+      <button type="submit">Finish</button>
+    </form>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

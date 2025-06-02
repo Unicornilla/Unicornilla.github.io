@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../css/index.css"> -->
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+
+<body onload="searchOnLoad()">
+
+    <header class="site-header">
+
+        <a href="index.html" class="logo-link">
+            <img src="../assets/FoodyFinder_Title.png" alt="FoodyFinder Logo" class="logo-img">
+        </a>
+
+        <div class="auth-buttons">
+            <a href="login.html" class="btn login-btn">Login</a>
+            <a href="../html/signup.html" class="btn signup-btn">Sign Up</a>
+        </div>
+        
+    </header>
+
+  <!-- Search + Filter Section -->
+  <div class="search-bar-wrapper">
+    <input type="text" id="searchInput" placeholder="Search for a dish or restaurant..." />
+    
+    <div class="filter-wrapper">
+        <button id="filterToggle" class="filter-btn">🔍 Filter</button>
+            <ul id="filterMenu" class="filter-menu hidden">
+                <li data-filter="distance">By Distance</li>
+                <li data-filter="price">By Price</li>
+                <li data-filter="popularity">By Popularity</li>
+          </ul>
+    </div>
+
+
+    <button onclick="search()">Search</button>
+
+  </div>
+
+  <!-- Tags Input -->
+  <div class="tag-input-wrapper" id="tagInputWrapper">
+    <input type="text" id="tagInput" placeholder="Add tags (press Enter)..." />
+    <ul class="tag-suggestions" id="tagSuggestions"></ul>
+  </div>
+
+    <!-- suggestions -->
+
+<div class="suggestions">
+  <!-- Loop Suggestion Boxes -->
+    <code id="foodDataInsert">
+        <!-- Loop HTML goes here -->
+    </code>
+</div>
+
+  <script src="../js/search.js"></script>
+</body>
+</html>
