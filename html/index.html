@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FoodyFinder</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/header.css">
+</head>
+
+
+
+<body>
+
+    <header class="site-header">
+
+        <a href="index.html" class="logo-link">
+            <img src="../assets/FoodyFinder_Title.png" alt="FoodyFinder Logo" class="logo-img">
+        </a>
+
+        <div class="auth-buttons">
+            <a href="login.html" class="btn login-btn">Login</a>
+            <a href="../html/signup.html" class="btn signup-btn">Sign Up</a>
+        </div>
+        
+    </header>
+
+  <!-- <header> -->
+    <div class="site-logo">
+        <img src="../assets/FoodyFinder_Title.png" alt="foodyfinder logo">
+    </div>
+
+    <div class="site-description">
+      <p>Discover delicious dishes, one review at a time.</p>
+    </div>
+  <!-- </header> -->
+
+  <!-- Search + Filter Section -->
+  <div class="search-bar-wrapper">
+    <input type="text" id="searchInput" placeholder="Search for a dish or restaurant..." />
+    
+    <div class="filter-wrapper">
+        <button id="filterToggle" class="filter-btn">🔍 Filter</button>
+            <ul id="filterMenu" class="filter-menu hidden">
+                <li data-filter="distance">By Distance</li>
+                <li data-filter="price">By Price</li>
+                <li data-filter="popularity">By Popularity</li>
+          </ul>
+    </div>
+
+
+    <button onclick="search()">Search</button>
+
+  </div>
+
+  <!-- Tags Input -->
+  <div class="tag-input-wrapper" id="tagInputWrapper">
+    <input type="text" id="tagInput" placeholder="Add tags (press Enter)..." />
+    <ul class="tag-suggestions" id="tagSuggestions"></ul>
+  </div>
+
+  
+  <h2 class="top-picks-title">Top picks for you</h2>
+
+
+  <!-- suggestions -->
+
+<div class="suggestions">
+
+   
+  <!-- Pick 1 -->
+    <div class="suggestion-box" >
+      <a href="../html/review.html">
+        <img src="../assets/pizza.png" alt="Margherita Pizza">
+      </a>
+      <div class="suggestion-content">
+        <h3>🍕 Margherita Pizza</h3>
+        <p class="meta">💲Rp. 42.000 &nbsp; | &nbsp; ⭐ 4.8 &nbsp; </p>
+        <p class="meta">📍 Napoli Bistro &nbsp; | &nbsp; 📏 1.1 km</p>
+        <p class="description">A classic Italian pizza topped with fresh mozzarella, tomatoes, and basil.</p>
+        <div class="tags">
+          <span class="tag">Italian</span>
+          <span class="tag">Vegetarian</span>
+          <span class="tag">Cheesy</span>
+          <span class="tag">Affordable</span>
+          <span class="tag">Wood-Grilled</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pick 2 -->
+    <div class="suggestion-box">
+      <img src="../assets/salmonsushi.png" alt="Salmon Sushi">
+      <div class="suggestion-content">
+        <h3>🍣 Salmon Sushi</h3>
+        <p class="meta">💲Rp. 80.000 &nbsp; | &nbsp; ⭐ 4.8 &nbsp;</p>
+        <p class="meta">📍 Tokyo Bites &nbsp; | &nbsp; 📏 2.4 km</p>
+        <p class="description">Delicate slices of buttery salmon over seasoned rice with a hint of wasabi.</p>
+        <div class="tags">
+          <span class="tag">Japanese</span>
+          <span class="tag">Seafood</span>
+          <span class="tag">Fresh</span>
+          <span class="tag">Umami</span>
+          <span class="tag">Raw</span>
+        </div>
+      </div>
+  </div>
+
+  <!-- Pick 3 -->
+  <div class="suggestion-box">
+    <img src="../assets/burger.png" alt="Double Cheeseburger">
+    <div class="suggestion-content">
+      <h3>🍔 Double Cheeseburger</h3>
+      <p class="meta">💲Rp. 35.000 &nbsp; | &nbsp; ⭐ 4.6 &nbsp;</p>
+      <p class="meta">📍 Grill King &nbsp; | &nbsp; 📏 0.9 km</p>
+      <p class="description">A juicy double patty burger stacked with cheddar, pickles, and house sauce.</p>
+      <div class="tags">
+        <span class="tag">American</span>
+        <span class="tag">Beef</span>
+        <span class="tag">Grilled</span>
+        <span class="tag">Juicy</span>
+        <span class="tag">Spicy</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- <div class="suggestions">
+    <div class="suggestion-box">
+      <img src="https://source.unsplash.com/200x150/?sushi" alt="Salmon Sushi">
+      <h3>🍣 Salmon Sushi</h3>
+      <p>Fresh, buttery salmon over seasoned rice.</p>
+    </div>
+    <div class="suggestion-box">
+      <img src="https://source.unsplash.com/200x150/?burger" alt="Double Cheeseburger">
+      <h3>🍔 Double Cheeseburger</h3>
+      <p>Juicy and cheesy with a kick of pickles and sauce.</p>
+    </div>
+</div> -->
+
+
+
+<h2 class="popular-title">What's popular</h2>
+<div class="popular-grid">
+  <div class="popular-card">
+    <img src="../assets/ramen.png" alt="Ramen">
+    <div class="card-content">
+      <h4>Spicy Ramen Bowl</h4>
+      <p class="meta">💲Rp. 45.000 &nbsp; | &nbsp; ⭐ 4.5 &nbsp; | &nbsp; 📍Tokyo Ramen House | &nbsp; 📏 0.9 km</p>
+      <div class="tags">
+        <span class="tag">Spicy</span>
+        <span class="tag">Noodles</span>
+        <span class="tag">Japanese</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="popular-card">
+    <img src="../assets/masala.png" alt="Tikka Masala">
+    <div class="card-content">
+      <h4>Chicken Tikka Masala</h4>
+      <p class="meta">💲Rp. 58.000 &nbsp; | &nbsp; ⭐ 4.7 &nbsp; | &nbsp; 📍Bombay Bistro | &nbsp; 📏 1.3 km</p>
+      <div class="tags">
+        <span class="tag">Indian</span>
+        <span class="tag">Spicy</span>
+        <span class="tag">Dinner</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="popular-card">
+    <img src="../assets/veganbowl.jpg" alt="Buddha Bowl">
+    <div class="card-content">
+      <h4>Vegan Buddha Bowl</h4>
+      <p class="meta">💲Rp. 92.000 &nbsp; | &nbsp; ⭐ 4.3 &nbsp; | &nbsp; 📍Green Kitchen | &nbsp; 📏 2.5 km</p>
+      <div class="tags">
+        <span class="tag">Vegan</span>
+        <span class="tag">Healthy</span>
+        <span class="tag">Gluten-Free</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="popular-card">
+    <img src="../assets/shrimppasta.jpg" alt="Shrimp Pasta">
+    <div class="card-content">
+      <h4>Garlic Butter Shrimp Pasta</h4>
+      <p class="meta">💲Rp. 66.000 &nbsp; | &nbsp; ⭐ 4.8 &nbsp; | &nbsp; 📍Pasta Haven | &nbsp; 📏 3.0 km</p>
+      <div class="tags">
+        <span class="tag">Seafood</span>
+        <span class="tag">Italian</span>
+        <span class="tag">Garlic</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="popular-card">
+    <img src="../assets/choco lava cake.png" alt="Lava Cake">
+    <div class="card-content">
+      <h4>Belgian Chocolate Lava Cake</h4>
+      <p class="meta">💲Rp. 30.000 &nbsp; | &nbsp; ⭐ 4.9 &nbsp; | &nbsp; 📍Sweet Cravings | &nbsp; 📏 0.5 km</p>
+      <div class="tags">
+        <span class="tag">Dessert</span>
+        <span class="tag">Chocolate</span>
+        <span class="tag">Sweet</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="popular-card">
+    <img src="../assets/opor.jpg" alt="Opor">
+    <div class="card-content">
+      <h4>Chicken Opor</h4>
+      <p class="meta">💲Rp. 28.000 &nbsp; | &nbsp; ⭐ 4.7 &nbsp; | &nbsp; 📍Opor House | &nbsp; 📏 0.8 km</p>
+      <div class="tags">
+        <span class="tag">Savory</span>
+        <span class="tag">Indonesian</span>
+        <span class="tag">Soup</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="popular-card">
+    <img src="../assets/applepie.jpg" alt="Apple Pie">
+    <div class="card-content">
+      <h4>Classic Apple Pie</h4>
+      <p class="meta">💲Rp. 40.000 &nbsp; | &nbsp; ⭐ 4.5 &nbsp; | &nbsp; 📍Sweet Cravings | &nbsp; 📏 0.9 km</p>
+      <div class="tags">
+        <span class="tag">Dessert</span>
+        <span class="tag">Fruit</span>
+        <span class="tag">Sweet</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="popular-card">
+    <img src="../assets/rendang.jpg" alt="Lava Cake">
+    <div class="card-content">
+      <h4>Beef Rendang</h4>
+      <p class="meta">💲Rp. 28.000 &nbsp; | &nbsp; ⭐ 4.9 &nbsp; | &nbsp; 📍Pagi Sore | &nbsp; 📏 0.3 km</p>
+      <div class="tags">
+        <span class="tag">Indonesian</span>
+        <span class="tag">Spicy</span>
+        <span class="tag">Beef</span>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+  <script>
+    function search() {
+      const input = document.getElementById('searchInput').value;
+      alert("Searching for: " + input);
+    }
+  </script>
+
+  <script src="../js/index.js"></script>
+
+
+  <footer>
+        <p>&copy; 2025 FoodyFinder. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
